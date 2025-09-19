@@ -41,7 +41,6 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
-        working-directory: "Fiap Cloud Games/AndreBrandaoCloudGames"
         run: |
           ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"anbrandao_ABCloudGames" /o:"anbrandao" /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
           dotnet build
