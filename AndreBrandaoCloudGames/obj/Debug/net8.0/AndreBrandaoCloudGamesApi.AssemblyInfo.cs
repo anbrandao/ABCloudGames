@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AndreBrandaoCloudGamesApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+637a0a00688edb46b27bf81d16fd9fcfb50bdc4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("AndreBrandaoCloudGamesApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AndreBrandaoCloudGamesApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AndreBrandaoCloudGames.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ea107ec1995f75d10b0006b82474121ebc4be91")]
 [assembly: System.Reflection.AssemblyProductAttribute("AndreBrandaoCloudGames.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AndreBrandaoCloudGames.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

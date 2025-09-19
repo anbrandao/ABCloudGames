@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{86646236-30E6-499A-82C2-C2869B62E466}|AndreBrandaoCloudGamesApi.csproj|solutionrelative:identity\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86646236-30E6-499A-82C2-C2869B62E466}|AndreBrandaoCloudGamesApi.csproj|c:\\repos\\fiap cloud games\\andrebrandaocloudgames\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86646236-30E6-499A-82C2-C2869B62E466}|AndreBrandaoCloudGamesApi.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{86646236-30E6-499A-82C2-C2869B62E466}|AndreBrandaoCloudGamesApi.csproj|c:\\repos\\fiap cloud games\\andrebrandaocloudgames\\identity\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86646236-30E6-499A-82C2-C2869B62E466}|AndreBrandaoCloudGamesApi.csproj|solutionrelative:identity\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86646236-30E6-499A-82C2-C2869B62E466}|AndreBrandaoCloudGamesApi.csproj|c:\\repos\\fiap cloud games\\andrebrandaocloudgames\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86646236-30E6-499A-82C2-C2869B62E466}|AndreBrandaoCloudGamesApi.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86646236-30E6-499A-82C2-C2869B62E466}|AndreBrandaoCloudGamesApi.csproj|c:\\repos\\fiap cloud games\\andrebrandaocloudgames\\exceptionsbase\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,8 +30,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,7 +48,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Repos\\Fiap Cloud Games\\AndreBrandaoCloudGames\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGEAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-19T14:04:43.522Z",
               "EditorCaption": ""
@@ -55,12 +63,11 @@
               "RelativeToolTip": "Identity\\TokenService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAIA/wCIAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T13:42:23.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T13:42:23.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "C:\\Repos\\Fiap Cloud Games\\AndreBrandaoCloudGames\\Identity\\UsuarioService.cs",
               "RelativeDocumentMoniker": "Identity\\UsuarioService.cs",
@@ -68,12 +75,11 @@
               "RelativeToolTip": "Identity\\UsuarioService.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T13:34:10.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T13:34:10.093Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Repos\\Fiap Cloud Games\\AndreBrandaoCloudGames\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
@@ -81,8 +87,7 @@
               "RelativeToolTip": "Controllers\\UsuarioController.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAkwC8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T13:33:31.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T13:33:31.86Z"
             },
             {
               "$type": "Document",
@@ -94,16 +99,7 @@
               "RelativeToolTip": "ExceptionsBase\\ExceptionMiddleware.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T12:51:27.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "WhenOpened": "2025-09-19T12:51:27.676Z"
             }
           ]
         }

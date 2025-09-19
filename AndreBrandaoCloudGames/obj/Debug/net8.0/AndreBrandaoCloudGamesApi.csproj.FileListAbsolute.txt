@@ -294,3 +294,4 @@ C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\obj\Debug\net8.0\refint\AndreBr
 C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\obj\Debug\net8.0\AndreBrandaoCloudGamesApi.pdb
 C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\obj\Debug\net8.0\AndreBrandaoCloudGamesApi.genruntimeconfig.cache
 C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\obj\Debug\net8.0\ref\AndreBrandaoCloudGamesApi.dll
+C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\obj\Debug\net8.0\AndreBrandaoCloudGamesApi.sourcelink.json

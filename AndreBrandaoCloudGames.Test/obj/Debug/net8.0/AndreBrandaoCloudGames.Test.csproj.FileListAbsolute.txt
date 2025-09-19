@@ -367,3 +367,4 @@ C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames.Test\obj\Debug\net8.0\refint\An
 C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames.Test\obj\Debug\net8.0\AndreBrandaoCloudGames.Test.pdb
 C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames.Test\obj\Debug\net8.0\AndreBrandaoCloudGames.Test.genruntimeconfig.cache
 C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames.Test\obj\Debug\net8.0\ref\AndreBrandaoCloudGames.Test.dll
+C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames.Test\obj\Debug\net8.0\AndreBrandaoCloudGames.Test.sourcelink.json
