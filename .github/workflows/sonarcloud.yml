@@ -1,45 +1,56 @@
-name: Build and Analyze .NET API
+name: SonarQube
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
-
-env:
-  Solution_Name: AndreBrandaoCloudGames.sln
-  Test_Project_Path: AndreBrandaoCloudGames.Test/AndreBrandaoCloudGames.Test.csproj
+    types: [opened, synchronize, reopened]
 
 jobs:
   build:
+    name: Build and analyze
     runs-on: windows-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'zulu'
 
-    - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v2
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v4
+        with:
+          path: ~\sonar\cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
 
-    - name: Begin SonarCloud analysis
-      run: dotnet-sonarscanner begin /k:"anbrandao_ABCloudGames" /o:"anbrandao" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-      working-directory: Fiap Cloud Games/AndreBrandaoCloudGames
+      - name: Cache SonarCloud scanner
+        id: cache-sonar-scanner
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}\scanner
+          key: ${{ runner.os }}-sonar-scanner
+          restore-keys: ${{ runner.os }}-sonar-scanner
 
-    - name: Build solution
-      run: msbuild ${{ env.Solution_Name }} /p:Configuration=Release
-      working-directory: Fiap Cloud Games/AndreBrandaoCloudGames
+      - name: Install SonarCloud scanner
+        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+        shell: powershell
+        run: |
+          New-Item -Path ${{ runner.temp }}\scanner -ItemType Directory
+          dotnet tool update dotnet-sonarscanner --tool-path ${{ runner.temp }}\scanner
 
-    - name: Run unit tests
-      run: dotnet test ${{ env.Test_Project_Path }} --no-build --configuration Release
-      working-directory: Fiap Cloud Games/AndreBrandaoCloudGames
-
-    - name: End SonarCloud analysis
-      run: dotnet-sonarscanner end
-      working-directory: Fiap Cloud Games/AndreBrandaoCloudGames
+      - name: Build and analyze
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        shell: powershell
+        working-directory: 'Fiap Cloud Games/AndreBrandaoCloudGames'
+        run: |
+          ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"anbrandao_ABCloudGames" /o:"anbrandao" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet build
