@@ -1,0 +1,253 @@
+2025-09-16 13:02:53.676 -03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-16 13:02:53.730 -03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-16 13:02:53.732 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-16 13:02:53.733 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-16 13:02:53.751 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-16 13:02:53.760 -03:00 [INF] Applying migration '20250916160242_usuario'.
+2025-09-16 13:02:53.789 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250916160242_usuario', N'8.0.0');
+2025-09-16 13:05:22.473 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 13:05:22.601 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 13:05:22.605 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 13:05:22.714 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 13:05:22.719 -03:00 [INF] Hosting environment: Development
+2025-09-16 13:05:22.726 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 13:05:22.815 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 13:05:22.998 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 184.0291ms
+2025-09-16 13:05:23.094 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 13:05:23.094 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 13:05:23.106 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 11.7709ms
+2025-09-16 13:05:23.131 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.3884ms
+2025-09-16 13:05:24.007 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 13:05:24.026 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.1669ms
+2025-09-16 13:05:34.108 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/cadastro - application/json 172
+2025-09-16 13:05:34.129 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:05:34.153 -03:00 [INF] Route matched with {action = "CadastraUsuario", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] CadastraUsuario(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 13:05:34.958 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario (AndreBrandaoCloudGamesApi) in 780.7175ms
+2025-09-16 13:05:34.962 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:05:34.966 -03:00 [ERR] Erro não tratado
+System.ApplicationException: Falha ao cadastrar usuario
+   at AndreBrandaoCloudGamesApi.Identity.UsuarioService.CadastraUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\UsuarioService.cs:line 32
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 44
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 13:05:35.015 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/cadastro - 500 null application/json 907.2557ms
+2025-09-16 13:08:35.101 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/cadastro - application/json 172
+2025-09-16 13:08:35.112 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:08:35.115 -03:00 [INF] Route matched with {action = "CadastraUsuario", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] CadastraUsuario(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 13:08:35.208 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario (AndreBrandaoCloudGamesApi) in 85.8197ms
+2025-09-16 13:08:35.210 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:08:35.212 -03:00 [ERR] Erro não tratado
+System.ApplicationException: Falha ao cadastrar usuario
+   at AndreBrandaoCloudGamesApi.Identity.UsuarioService.CadastraUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\UsuarioService.cs:line 32
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 44
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 13:08:35.218 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/cadastro - 500 null application/json 116.8331ms
+2025-09-16 13:15:19.451 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 13:15:19.776 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 13:15:19.781 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 13:15:19.824 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 13:15:19.828 -03:00 [INF] Hosting environment: Development
+2025-09-16 13:15:19.829 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 13:15:19.931 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 13:15:20.025 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 94.5683ms
+2025-09-16 13:15:20.064 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 13:15:20.064 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 13:15:20.079 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 15.1115ms
+2025-09-16 13:15:20.115 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.2945ms
+2025-09-16 13:15:20.784 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 13:15:20.819 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.4212ms
+2025-09-16 13:16:16.359 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/cadastro - application/json 182
+2025-09-16 13:16:16.369 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:16:16.419 -03:00 [INF] Route matched with {action = "CadastraUsuario", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] CadastraUsuario(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 13:16:18.859 -03:00 [INF] Executed DbCommand (74ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [u].[CreatedDate], [u].[IsPremium], [u].[Nome], [u].[Role], [u].[Saldo]
+FROM [AspNetUsers] AS [a]
+INNER JOIN [Usuario] AS [u] ON [a].[Id] = [u].[Id]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-09-16 13:16:19.388 -03:00 [ERR] Failed executing DbCommand (23ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256), @p15='?' (Size = 450), @p16='?' (DbType = DateTime), @p17='?' (DbType = Boolean), @p18='?' (Size = 100) (DbType = AnsiString), @p19='?' (Size = 100) (DbType = AnsiString), @p20='?' (Precision = 10) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+INSERT INTO [Usuario] ([Id], [CreatedDate], [IsPremium], [Nome], [Role], [Saldo])
+VALUES (@p15, @p16, @p17, @p18, @p19, @p20);
+2025-09-16 13:16:19.447 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'AndreBrandaoCloudGamesApi.Infraestrutura.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Email', table 'ABCloudGames.dbo.AspNetUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Usuario_AspNetUsers_Id". The conflict occurred in database "ABCloudGames", table "dbo.AspNetUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:6fca28f8-7a6b-4a17-9059-62b322354dc7
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Email', table 'ABCloudGames.dbo.AspNetUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Usuario_AspNetUsers_Id". The conflict occurred in database "ABCloudGames", table "dbo.AspNetUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:6fca28f8-7a6b-4a17-9059-62b322354dc7
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-09-16 13:16:19.495 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario (AndreBrandaoCloudGamesApi) in 3059.3312ms
+2025-09-16 13:16:19.505 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:16:19.511 -03:00 [ERR] Erro não tratado
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Email', table 'ABCloudGames.dbo.AspNetUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Usuario_AspNetUsers_Id". The conflict occurred in database "ABCloudGames", table "dbo.AspNetUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:6fca28f8-7a6b-4a17-9059-62b322354dc7
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.CreateAsync(TUser user, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user, String password)
+   at AndreBrandaoCloudGamesApi.Identity.UsuarioService.CadastraUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\UsuarioService.cs:line 27
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.CadastraUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 44
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 13:16:19.611 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/cadastro - 500 null application/json 3251.9469ms
+2025-09-16 13:17:30.422 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 13:17:30.524 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 13:17:30.526 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 13:17:30.562 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 13:17:30.564 -03:00 [INF] Hosting environment: Development
+2025-09-16 13:17:30.565 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 13:17:31.196 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 13:17:31.327 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 132.4918ms
+2025-09-16 13:17:31.718 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 13:17:31.718 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 13:17:31.729 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 11.4519ms
+2025-09-16 13:17:31.764 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.0085ms
+2025-09-16 13:17:31.840 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 13:17:31.913 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 73.1744ms
+2025-09-16 13:17:46.128 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 13:17:46.247 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 13:17:46.252 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 13:17:46.299 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 13:17:46.302 -03:00 [INF] Hosting environment: Development
+2025-09-16 13:17:46.304 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 13:17:46.696 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 13:17:46.800 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 104.8845ms
+2025-09-16 13:17:46.835 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 13:17:46.835 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 13:17:46.841 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 6.4962ms
+2025-09-16 13:17:46.856 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.2077ms
+2025-09-16 13:17:46.884 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 13:17:46.903 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.2361ms
+2025-09-16 13:18:12.523 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 13:18:12.620 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 13:18:12.623 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 13:18:12.663 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 13:18:12.666 -03:00 [INF] Hosting environment: Development
+2025-09-16 13:18:12.668 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 13:18:12.912 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 13:18:13.027 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 115.807ms
+2025-09-16 13:18:13.052 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 13:18:13.052 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 13:18:13.060 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 7.7248ms
+2025-09-16 13:18:13.083 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.5176ms
+2025-09-16 13:18:13.111 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 13:18:13.127 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.9517ms

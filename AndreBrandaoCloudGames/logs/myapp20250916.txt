@@ -1,0 +1,77 @@
+2025-09-16 11:21:08.256 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 11:21:08.479 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 11:21:08.485 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 11:21:08.531 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 11:21:08.535 -03:00 [INF] Hosting environment: Development
+2025-09-16 11:21:08.539 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 11:21:08.978 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 11:21:09.197 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 222.1065ms
+2025-09-16 11:21:09.262 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 11:21:09.262 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 11:21:09.269 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 6.9319ms
+2025-09-16 11:21:09.308 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.3859ms
+2025-09-16 11:21:09.389 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 11:21:09.414 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.7916ms
+2025-09-16 11:22:19.098 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 11:22:19.222 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 11:22:19.224 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 11:22:19.271 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 11:22:19.273 -03:00 [INF] Hosting environment: Development
+2025-09-16 11:22:19.275 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 11:22:19.713 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 11:22:19.855 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 141.8409ms
+2025-09-16 11:22:19.915 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 11:22:19.915 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 11:22:19.931 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 16.0974ms
+2025-09-16 11:22:19.943 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.6237ms
+2025-09-16 11:22:19.985 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 11:22:20.010 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.6625ms
+2025-09-16 11:23:29.419 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 11:23:29.519 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 11:23:29.522 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 11:23:29.577 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 11:23:29.580 -03:00 [INF] Hosting environment: Development
+2025-09-16 11:23:29.582 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 11:23:29.634 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 11:23:29.754 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 120.0831ms
+2025-09-16 11:23:29.786 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 11:23:29.786 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 11:23:29.793 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 6.9023ms
+2025-09-16 11:23:29.809 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.053ms
+2025-09-16 11:23:29.970 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 11:23:30.060 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 89.5399ms
+2025-09-16 11:23:40.941 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 11:23:41.082 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 11:23:41.084 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 11:23:41.153 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 11:23:41.156 -03:00 [INF] Hosting environment: Development
+2025-09-16 11:23:41.159 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 11:23:41.169 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 11:23:41.321 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 151.8621ms
+2025-09-16 11:23:41.333 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 11:23:41.333 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 11:23:41.343 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 10.2527ms
+2025-09-16 11:23:41.363 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.5602ms
+2025-09-16 11:23:41.382 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 11:23:41.407 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.0091ms
+2025-09-16 11:24:09.227 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 11:24:09.271 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 44.1203ms
+2025-09-16 11:24:09.327 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 11:24:09.330 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 11:24:09.349 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 19.0974ms
+2025-09-16 11:24:09.368 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.542ms
+2025-09-16 11:24:09.427 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 11:24:09.497 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 70.6661ms
+2025-09-16 11:24:25.832 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Jogo - application/json 65
+2025-09-16 11:24:25.859 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:24:25.937 -03:00 [INF] Route matched with {action = "PostJogo", controller = "Jogo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostJogo(AndreBrandaoCloudGamesApi.Data.Dtos.JogoDto.CreateJogoDto) on controller AndreBrandaoCloudGamesApi.Controllers.JogoController (AndreBrandaoCloudGamesApi).
+2025-09-16 11:24:28.491 -03:00 [INF] Executed DbCommand (79ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p5='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Jogo] ([Id], [CreatedDate], [IsPromotional], [Preco], [PrecoVenda], [Titulo])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-16 11:24:28.553 -03:00 [INF] Setting HTTP status code 201.
+2025-09-16 11:24:28.570 -03:00 [INF] Writing value of type 'Jogo' as Json.
+2025-09-16 11:24:28.628 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi) in 2673.8489ms
+2025-09-16 11:24:28.635 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:24:28.652 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Jogo - 201 null application/json; charset=utf-8 2819.4793ms

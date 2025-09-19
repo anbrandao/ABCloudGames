@@ -1,0 +1,438 @@
+[
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController",
+    "Method": "GetItensPedidos",
+    "RelativePath": "ItemPedido",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.ICollection\u00601[[AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.ReadItemPedidoDto, AndreBrandaoCloudGamesApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController",
+    "Method": "PostItemPedido",
+    "RelativePath": "ItemPedido",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createItemPedidoDto",
+        "Type": "AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.CreateItemPedidoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController",
+    "Method": "PutItemPedido",
+    "RelativePath": "ItemPedido/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "createItemPedidoDto",
+        "Type": "AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.CreateItemPedidoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController",
+    "Method": "DeleteItemPedido",
+    "RelativePath": "ItemPedido/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController",
+    "Method": "GetItemPedido",
+    "RelativePath": "ItemPedido/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController",
+    "Method": "GetDetalhesDoItemPedido",
+    "RelativePath": "ItemPedido/{id}/detalhes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.JogoController",
+    "Method": "GetJogos",
+    "RelativePath": "Jogo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.ICollection\u00601[[AndreBrandaoCloudGamesApi.Data.Dtos.JogoDto.ReadJogoDto, AndreBrandaoCloudGamesApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.JogoController",
+    "Method": "PostJogo",
+    "RelativePath": "Jogo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createJogoDto",
+        "Type": "AndreBrandaoCloudGamesApi.Data.Dtos.JogoDto.CreateJogoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.JogoController",
+    "Method": "PutJogo",
+    "RelativePath": "Jogo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "createJogoDto",
+        "Type": "AndreBrandaoCloudGamesApi.Data.Dtos.JogoDto.CreateJogoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.JogoController",
+    "Method": "DeleteJogo",
+    "RelativePath": "Jogo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.JogoController",
+    "Method": "GetJogo",
+    "RelativePath": "Jogo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.JogoController",
+    "Method": "GetDetalhesDoJogo",
+    "RelativePath": "Jogo/{id}/detalhes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.PedidoController",
+    "Method": "GetPedidos",
+    "RelativePath": "Pedido",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.ICollection\u00601[[AndreBrandaoCloudGamesApi.Data.Dtos.PedidoDto.ReadPedidoDto, AndreBrandaoCloudGamesApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.PedidoController",
+    "Method": "PostPedido",
+    "RelativePath": "Pedido",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPedidoDto",
+        "Type": "AndreBrandaoCloudGamesApi.Data.Dtos.PedidoDto.CreatePedidoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.PedidoController",
+    "Method": "PutPedido",
+    "RelativePath": "Pedido/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "createPedidoDto",
+        "Type": "AndreBrandaoCloudGamesApi.Data.Dtos.PedidoDto.CreatePedidoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.PedidoController",
+    "Method": "DeletePedido",
+    "RelativePath": "Pedido/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.PedidoController",
+    "Method": "GetPedido",
+    "RelativePath": "Pedido/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.PedidoController",
+    "Method": "GetDetalhesDoPedido",
+    "RelativePath": "Pedido/{id}/detalhes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.PromocaoController",
+    "Method": "AplicaPromocaoJogos",
+    "RelativePath": "Promocao/notificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "isPromotional",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.UsuarioController",
+    "Method": "GetUsuarios",
+    "RelativePath": "Usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.ICollection\u00601[[AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.ReadUsuarioDto, AndreBrandaoCloudGamesApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.UsuarioController",
+    "Method": "PutUsuario",
+    "RelativePath": "Usuario/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "createUsuarioDto",
+        "Type": "AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.UsuarioController",
+    "Method": "DeleteUsuario",
+    "RelativePath": "Usuario/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.UsuarioController",
+    "Method": "GetDetalhesDoUsuario",
+    "RelativePath": "Usuario/{id}/detalhes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.UsuarioController",
+    "Method": "CadastraUsuario",
+    "RelativePath": "Usuario/cadastro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createUsuarioDto",
+        "Type": "AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AndreBrandaoCloudGamesApi.Controllers.UsuarioController",
+    "Method": "Login",
+    "RelativePath": "Usuario/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginUsuarioDto",
+        "Type": "AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.LoginUsuarioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

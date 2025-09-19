@@ -1,0 +1,1421 @@
+2025-09-16 11:23:43.220 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-16 11:23:43.278 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-16 11:23:43.279 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-16 11:23:43.280 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-16 11:23:43.292 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-16 11:23:43.301 -03:00 [INF] Applying migration '20250916142331_adicionaPrecoVenda'.
+2025-09-16 11:23:43.341 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jogo] ADD [PrecoVenda] DECIMAL(10,2) NOT NULL DEFAULT 0.0;
+2025-09-16 11:23:43.343 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250916142331_adicionaPrecoVenda', N'8.0.0');
+2025-09-16 11:29:03.821 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 11:29:03.916 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 11:29:03.918 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 11:29:03.956 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 11:29:03.960 -03:00 [INF] Hosting environment: Development
+2025-09-16 11:29:03.965 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 11:29:04.154 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 11:29:04.306 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 155.9014ms
+2025-09-16 11:29:04.326 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 11:29:04.326 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 11:29:04.335 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 8.9301ms
+2025-09-16 11:29:04.365 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.492ms
+2025-09-16 11:29:04.795 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 11:29:04.813 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.8488ms
+2025-09-16 11:29:30.019 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 11:29:30.060 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 40.5645ms
+2025-09-16 11:29:30.145 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 11:29:30.145 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 11:29:30.183 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 37.0906ms
+2025-09-16 11:29:30.203 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.5813ms
+2025-09-16 11:29:30.437 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 11:29:30.472 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.8943ms
+2025-09-16 11:29:49.590 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Jogo - application/json 63
+2025-09-16 11:29:49.609 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:29:49.665 -03:00 [INF] Route matched with {action = "PostJogo", controller = "Jogo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostJogo(AndreBrandaoCloudGamesApi.Data.Dtos.JogoDto.CreateJogoDto) on controller AndreBrandaoCloudGamesApi.Controllers.JogoController (AndreBrandaoCloudGamesApi).
+2025-09-16 11:29:51.861 -03:00 [INF] Executed DbCommand (73ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p5='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Jogo] ([Id], [CreatedDate], [IsPromotional], [Preco], [PrecoVenda], [Titulo])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-16 11:29:51.912 -03:00 [INF] Setting HTTP status code 201.
+2025-09-16 11:29:51.923 -03:00 [INF] Writing value of type 'Jogo' as Json.
+2025-09-16 11:29:51.971 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi) in 2294.1557ms
+2025-09-16 11:29:51.978 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:29:51.993 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Jogo - 201 null application/json; charset=utf-8 2402.863ms
+2025-09-16 11:30:16.410 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 11:30:16.429 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:30:16.447 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 11:30:16.912 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 11:30:16.970 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:30:16.987 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:30:16.998 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:30:17.006 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:30:17.012 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:30:17.022 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:30:17.029 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:30:17.041 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:30:17.058 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 11:30:17.063 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 608.2656ms
+2025-09-16 11:30:17.068 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:30:17.074 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 663.5783ms
+2025-09-16 11:32:58.936 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 5
+2025-09-16 11:32:58.944 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:32:58.947 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 11:32:58.977 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 11:32:58.993 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:32:59.005 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:32:59.013 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:32:59.025 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:32:59.032 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:32:59.041 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:32:59.047 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:32:59.055 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:32:59.061 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 11:32:59.064 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 111.384ms
+2025-09-16 11:32:59.068 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:32:59.072 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 135.8152ms
+2025-09-16 11:33:34.856 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 5
+2025-09-16 11:33:34.862 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:33:34.864 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 11:33:34.871 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 11:33:34.877 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:34.885 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:34.890 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:34.899 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:34.907 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:34.917 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:34.925 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:34.933 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:34.941 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 11:33:34.945 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 77.0234ms
+2025-09-16 11:33:34.951 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:33:34.954 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 98.2527ms
+2025-09-16 11:33:53.181 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 5
+2025-09-16 11:33:53.215 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:33:53.221 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 11:33:53.233 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 11:33:53.250 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:53.264 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:53.278 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:53.290 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:53.301 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:53.313 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:53.324 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:53.333 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:33:53.342 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 11:33:53.345 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 117.1645ms
+2025-09-16 11:33:53.350 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:33:53.356 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 174.2732ms
+2025-09-16 11:34:02.129 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 11:34:02.135 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:34:02.137 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 11:34:02.146 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 11:34:02.161 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:02.176 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:02.184 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:02.193 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:02.201 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:02.208 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:02.216 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:02.223 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:02.228 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 11:34:02.232 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 91.2292ms
+2025-09-16 11:34:02.235 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:34:02.237 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 108.2117ms
+2025-09-16 11:34:23.330 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 5
+2025-09-16 11:34:23.335 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:34:23.337 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 11:34:23.344 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 11:34:23.354 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:23.363 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:23.375 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:23.384 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:23.393 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:23.402 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:23.413 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:23.422 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:34:23.429 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 11:34:23.433 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 92.3594ms
+2025-09-16 11:34:23.439 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:34:23.443 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 112.8586ms
+2025-09-16 11:35:58.380 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 11:35:58.695 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 11:35:58.697 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 11:35:58.732 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 11:35:58.734 -03:00 [INF] Hosting environment: Development
+2025-09-16 11:35:58.735 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 11:35:58.831 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 11:35:58.952 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 121.4632ms
+2025-09-16 11:35:59.030 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 11:35:59.030 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 11:35:59.048 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 17.4965ms
+2025-09-16 11:35:59.076 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.5573ms
+2025-09-16 11:35:59.139 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 11:35:59.192 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 52.5875ms
+2025-09-16 11:36:10.248 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 11:36:10.260 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:36:10.288 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 11:36:12.349 -03:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 11:36:12.655 -03:00 [INF] Executed DbCommand (25ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:12.684 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:12.695 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:12.704 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:12.714 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:12.727 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:12.739 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:12.748 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:12.771 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 11:36:12.787 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 2478.8316ms
+2025-09-16 11:36:12.793 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:36:12.811 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 2562.6963ms
+2025-09-16 11:36:23.567 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 5
+2025-09-16 11:36:23.577 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:36:23.582 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 11:36:23.692 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 11:36:23.709 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:23.719 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:23.729 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:23.741 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:23.751 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:23.758 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:23.766 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:23.771 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 11:36:23.775 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 11:36:23.778 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 190.3373ms
+2025-09-16 11:36:23.780 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 11:36:23.782 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 214.8804ms
+2025-09-16 12:02:58.931 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 12:02:59.248 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 12:02:59.250 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 12:02:59.300 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 12:02:59.303 -03:00 [INF] Hosting environment: Development
+2025-09-16 12:02:59.305 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 12:02:59.478 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 12:02:59.613 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 134.9842ms
+2025-09-16 12:02:59.758 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 12:02:59.758 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 12:02:59.771 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 12.1711ms
+2025-09-16 12:02:59.778 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.3703ms
+2025-09-16 12:02:59.818 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 12:02:59.835 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.9485ms
+2025-09-16 12:03:05.184 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 12:03:05.200 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:03:05.265 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:03:07.390 -03:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:03:07.513 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 12:03:07.529 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 2245.6879ms
+2025-09-16 12:03:07.535 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:03:07.551 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 2367.5019ms
+2025-09-16 12:03:20.204 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 5
+2025-09-16 12:03:20.213 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:03:20.217 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:03:20.343 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:03:20.355 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 12:03:20.361 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 138.0364ms
+2025-09-16 12:03:20.366 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:03:20.370 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 166.2351ms
+2025-09-16 12:03:56.714 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Jogo - application/json 69
+2025-09-16 12:03:56.723 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:03:56.734 -03:00 [INF] Route matched with {action = "PostJogo", controller = "Jogo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostJogo(AndreBrandaoCloudGamesApi.Data.Dtos.JogoDto.CreateJogoDto) on controller AndreBrandaoCloudGamesApi.Controllers.JogoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:03:57.250 -03:00 [INF] Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p5='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Jogo] ([Id], [CreatedDate], [IsPromotional], [Preco], [PrecoVenda], [Titulo])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-16 12:03:57.279 -03:00 [INF] Setting HTTP status code 201.
+2025-09-16 12:03:57.296 -03:00 [INF] Writing value of type 'Jogo' as Json.
+2025-09-16 12:03:57.339 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi) in 597.5769ms
+2025-09-16 12:03:57.343 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:03:57.346 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Jogo - 201 null application/json; charset=utf-8 632.0089ms
+2025-09-16 12:04:11.507 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 12:04:11.512 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:04:11.513 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:04:11.524 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:04:11.532 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 12:04:11.536 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 19.1423ms
+2025-09-16 12:04:11.541 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:04:11.545 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 37.5136ms
+2025-09-16 12:09:25.615 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 12:09:25.721 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 12:09:25.723 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 12:09:25.764 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 12:09:25.767 -03:00 [INF] Hosting environment: Development
+2025-09-16 12:09:25.769 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 12:09:26.403 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 12:09:26.561 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 157.8166ms
+2025-09-16 12:09:26.603 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 12:09:26.603 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 12:09:26.607 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 3.9831ms
+2025-09-16 12:09:26.635 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.7857ms
+2025-09-16 12:09:26.986 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 12:09:27.007 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.9213ms
+2025-09-16 12:09:31.655 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 12:09:31.686 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:09:31.702 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:09:32.330 -03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:09:32.379 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 12:09:32.385 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 676.4743ms
+2025-09-16 12:09:32.387 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:09:32.392 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 737.1661ms
+2025-09-16 12:14:08.890 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 12:14:09.180 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 12:14:09.184 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 12:14:09.350 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 12:14:09.358 -03:00 [INF] Hosting environment: Development
+2025-09-16 12:14:09.360 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 12:14:10.174 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 12:14:10.518 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 352.0093ms
+2025-09-16 12:14:10.542 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 12:14:10.556 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 14.3725ms
+2025-09-16 12:14:10.595 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 12:14:10.658 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.0327ms
+2025-09-16 12:14:10.699 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 12:14:10.726 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.6536ms
+2025-09-16 12:14:17.281 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 12:14:17.302 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:14:17.367 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:14:29.792 -03:00 [INF] Executed DbCommand (93ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:22:31.646 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 12:22:32.007 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 12:22:32.009 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 12:22:32.051 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 12:22:32.053 -03:00 [INF] Hosting environment: Development
+2025-09-16 12:22:32.054 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 12:22:32.387 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 12:22:32.610 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 227.5378ms
+2025-09-16 12:22:32.628 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 12:22:32.639 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 11.3924ms
+2025-09-16 12:22:32.664 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 12:22:32.694 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.8775ms
+2025-09-16 12:22:32.723 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 12:22:32.746 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.2733ms
+2025-09-16 12:22:37.138 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 12:22:37.147 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:22:37.169 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:22:48.296 -03:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:24:35.470 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:24:52.663 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:25:06.373 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:25:30.153 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:25:41.136 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:25:46.697 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:03.575 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:34.864 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 12:26:34.969 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 12:26:34.970 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 12:26:35.006 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 12:26:35.010 -03:00 [INF] Hosting environment: Development
+2025-09-16 12:26:35.013 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 12:26:35.240 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 12:26:35.372 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 132.6335ms
+2025-09-16 12:26:35.442 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 12:26:35.442 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 12:26:35.459 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 17.1062ms
+2025-09-16 12:26:35.470 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.0035ms
+2025-09-16 12:26:35.496 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 12:26:35.511 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.5817ms
+2025-09-16 12:26:45.737 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 12:26:45.764 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:26:45.828 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:26:48.144 -03:00 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:26:48.418 -03:00 [INF] Executed DbCommand (22ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:48.432 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:48.436 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:48.439 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:48.442 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:48.445 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:48.450 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:48.454 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:48.457 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:48.465 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 12:26:48.473 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 2633.4923ms
+2025-09-16 12:26:48.477 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:26:48.485 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 2748.0846ms
+2025-09-16 12:26:58.188 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 5
+2025-09-16 12:26:58.197 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:26:58.199 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:26:58.291 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:26:58.307 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:58.319 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:58.334 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:58.345 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:58.361 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:58.376 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:58.391 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:58.404 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:58.418 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:26:58.427 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 12:26:58.432 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 224.914ms
+2025-09-16 12:26:58.437 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:26:58.442 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 253.3527ms
+2025-09-16 12:28:23.237 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 12:28:23.344 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 12:28:23.349 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 12:28:23.485 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 12:28:23.489 -03:00 [INF] Hosting environment: Development
+2025-09-16 12:28:23.491 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 12:28:23.520 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 12:28:23.692 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 171.1235ms
+2025-09-16 12:28:23.762 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 12:28:23.762 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 12:28:23.845 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 82.9391ms
+2025-09-16 12:28:23.882 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 119.6221ms
+2025-09-16 12:28:24.076 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 12:28:24.125 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.8241ms
+2025-09-16 12:28:39.365 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 5
+2025-09-16 12:28:39.381 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:28:39.445 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:28:41.248 -03:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:28:41.471 -03:00 [INF] Executed DbCommand (16ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:28:41.489 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:28:41.496 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:28:41.503 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:28:41.509 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:28:41.515 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:28:41.521 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:28:41.527 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:28:41.534 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:28:41.551 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 12:28:41.562 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 2102.1474ms
+2025-09-16 12:28:41.567 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:28:41.579 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 2213.8665ms
+2025-09-16 12:29:01.429 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 12:29:01.434 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:29:01.436 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:29:01.486 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:29:01.497 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:01.502 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:01.507 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:01.512 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:01.520 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:01.527 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:01.536 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:01.543 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:01.552 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:01.559 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 12:29:01.562 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 123.7696ms
+2025-09-16 12:29:01.567 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:29:01.570 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 141.4506ms
+2025-09-16 12:29:10.014 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 12:29:10.024 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:29:10.027 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:29:10.076 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:29:10.095 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:10.111 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:10.123 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:10.133 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:10.146 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:10.161 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:10.178 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:10.195 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:10.212 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:10.221 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 12:29:10.226 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 193.0954ms
+2025-09-16 12:29:10.232 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:29:10.242 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 227.5014ms
+2025-09-16 12:29:17.686 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 12:29:17.692 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:29:17.696 -03:00 [INF] Route matched with {action = "AplicaPromocaoJogos", controller = "Promocao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AplicaPromocaoJogos(Boolean) on controller AndreBrandaoCloudGamesApi.Controllers.PromocaoController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:29:17.708 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[PrecoVenda], [j].[Titulo]
+FROM [Jogo] AS [j]
+2025-09-16 12:29:17.720 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:17.729 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:17.740 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:17.749 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:17.758 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:17.766 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:17.775 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:17.784 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:17.792 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Jogo] SET [CreatedDate] = @p0, [IsPromotional] = @p1, [Preco] = @p2, [PrecoVenda] = @p3, [Titulo] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2025-09-16 12:29:17.799 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-09-16 12:29:17.802 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi) in 97.1436ms
+2025-09-16 12:29:17.805 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PromocaoController.AplicaPromocaoJogos (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:29:17.807 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 200 null text/plain; charset=utf-8 121.5737ms
+2025-09-16 12:35:17.400 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 12:35:17.540 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 12:35:17.542 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 12:35:17.635 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 12:35:17.638 -03:00 [INF] Hosting environment: Development
+2025-09-16 12:35:17.640 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 12:35:17.656 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 12:35:17.819 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 163.179ms
+2025-09-16 12:35:17.839 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 12:35:17.839 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 12:35:17.853 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 13.8307ms
+2025-09-16 12:35:17.864 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.9315ms
+2025-09-16 12:35:18.509 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 12:35:18.542 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.8175ms
+2025-09-16 12:35:26.874 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 12:35:26.912 -03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-09-16 12:35:26.932 -03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-09-16 12:35:26.939 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 302 0 null 64.9401ms
+2025-09-16 12:35:26.942 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/Account/Login?ReturnUrl=%2FPromocao%2Fnotificar - null null
+2025-09-16 12:35:26.961 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/Account/Login?ReturnUrl=%2FPromocao%2Fnotificar - 404 0 null 18.6082ms
+2025-09-16 12:35:26.974 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7167/Account/Login, Response status code: 404
+2025-09-16 12:35:54.399 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 12:35:54.420 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 21.1035ms
+2025-09-16 12:35:54.460 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 12:35:54.460 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 12:35:54.471 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 11.1177ms
+2025-09-16 12:35:54.474 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.6111ms
+2025-09-16 12:35:54.615 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 12:35:54.645 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.7597ms
+2025-09-16 12:35:58.568 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Promocao/notificar - application/json 4
+2025-09-16 12:35:58.587 -03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-09-16 12:35:58.591 -03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-09-16 12:35:58.593 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Promocao/notificar - 302 0 null 24.8911ms
+2025-09-16 12:35:58.596 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/Account/Login?ReturnUrl=%2FPromocao%2Fnotificar - null null
+2025-09-16 12:35:58.607 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/Account/Login?ReturnUrl=%2FPromocao%2Fnotificar - 404 0 null 10.6998ms
+2025-09-16 12:35:58.615 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7167/Account/Login, Response status code: 404
+2025-09-16 12:36:06.638 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/Usuario - null null
+2025-09-16 12:36:06.651 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.GetUsuarios (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:36:06.670 -03:00 [INF] Route matched with {action = "GetUsuarios", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.ICollection`1[AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.ReadUsuarioDto]] GetUsuarios() on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:36:07.401 -03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [u].[CreatedDate], [u].[IsPremium], [u].[Nome], [u].[Role], [u].[Saldo]
+FROM [AspNetUsers] AS [a]
+INNER JOIN [Usuario] AS [u] ON [a].[Id] = [u].[Id]
+2025-09-16 12:36:07.502 -03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.ReadUsuarioDto, AndreBrandaoCloudGamesApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-16 12:36:07.517 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.GetUsuarios (AndreBrandaoCloudGamesApi) in 840.5377ms
+2025-09-16 12:36:07.521 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.GetUsuarios (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:36:07.525 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/Usuario - 200 null application/json; charset=utf-8 887.9029ms
+2025-09-16 12:55:31.245 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 12:55:31.663 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 12:55:31.670 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 12:55:31.737 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 12:55:31.739 -03:00 [INF] Hosting environment: Development
+2025-09-16 12:55:31.741 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 12:55:32.025 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 12:55:32.347 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 324.704ms
+2025-09-16 12:55:32.371 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 12:55:32.371 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 12:55:32.377 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 5.769ms
+2025-09-16 12:55:32.392 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.297ms
+2025-09-16 12:55:32.507 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 12:55:32.525 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.6439ms
+2025-09-16 12:58:03.005 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/login - application/json 71
+2025-09-16 12:58:03.029 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.Login (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:58:03.096 -03:00 [INF] Route matched with {action = "Login", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] Login(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.LoginUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:58:05.756 -03:00 [INF] Executed DbCommand (100ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [u].[CreatedDate], [u].[IsPremium], [u].[Nome], [u].[Role], [u].[Saldo]
+FROM [AspNetUsers] AS [a]
+INNER JOIN [Usuario] AS [u] ON [a].[Id] = [u].[Id]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-09-16 12:58:05.826 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.Login (AndreBrandaoCloudGamesApi) in 2714.3162ms
+2025-09-16 12:58:05.832 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.Login (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:58:05.837 -03:00 [ERR] Erro não tratado
+System.ApplicationException: Usuário não autenticado!
+   at AndreBrandaoCloudGamesApi.Identity.UsuarioService.Login(LoginUsuarioDto loginUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\UsuarioService.cs:line 40
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.Login(LoginUsuarioDto loginUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 60
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 12:58:05.937 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/login - 500 null application/json 2932.2009ms
+2025-09-16 12:58:44.105 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/cadastro - application/json 186
+2025-09-16 12:58:44.112 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:58:44.128 -03:00 [INF] Route matched with {action = "PostUsuario", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostUsuario(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:58:44.257 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi) in 121.1405ms
+2025-09-16 12:58:44.262 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:58:44.265 -03:00 [ERR] Erro não tratado
+System.Exception: Error mapping types.
+
+Mapping types:
+CreateUsuarioDto -> Usuario
+AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto -> AndreBrandaoCloudGamesApi.Models.Usuario
+
+Type Map configuration:
+CreateUsuarioDto -> Usuario
+AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto -> AndreBrandaoCloudGamesApi.Models.Usuario
+
+Destination Member:
+Role
+
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 52
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 12:58:44.275 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/cadastro - 500 null application/json 169.9543ms
+2025-09-16 12:59:03.538 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/cadastro - application/json 185
+2025-09-16 12:59:03.544 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:59:03.546 -03:00 [INF] Route matched with {action = "PostUsuario", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostUsuario(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:59:03.772 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi) in 221.9398ms
+2025-09-16 12:59:03.776 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:59:03.779 -03:00 [ERR] Erro não tratado
+System.Exception: Falha ao cadastrar usuario
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 52
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 12:59:03.786 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/cadastro - 500 null application/json 248.1863ms
+2025-09-16 12:59:24.500 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/cadastro - application/json 182
+2025-09-16 12:59:24.507 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:59:24.510 -03:00 [INF] Route matched with {action = "PostUsuario", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostUsuario(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:59:24.658 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi) in 143.9954ms
+2025-09-16 12:59:24.664 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:59:24.667 -03:00 [ERR] Erro não tratado
+System.Exception: Falha ao cadastrar usuario
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 52
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 12:59:24.680 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/cadastro - 500 null application/json 180.0522ms
+2025-09-16 12:59:37.314 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/cadastro - application/json 181
+2025-09-16 12:59:37.329 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:59:37.335 -03:00 [INF] Route matched with {action = "PostUsuario", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostUsuario(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:59:37.456 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi) in 112.1954ms
+2025-09-16 12:59:37.460 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:59:37.462 -03:00 [ERR] Erro não tratado
+System.Exception: Falha ao cadastrar usuario
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 52
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 12:59:37.470 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/cadastro - 500 null application/json 156.4815ms
+2025-09-16 12:59:45.519 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/cadastro - application/json 180
+2025-09-16 12:59:45.523 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:59:45.525 -03:00 [INF] Route matched with {action = "PostUsuario", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostUsuario(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 12:59:45.677 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi) in 149.9603ms
+2025-09-16 12:59:45.683 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 12:59:45.688 -03:00 [ERR] Erro não tratado
+System.Exception: Falha ao cadastrar usuario
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 52
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 12:59:45.699 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/cadastro - 500 null application/json 179.9861ms
+2025-09-16 13:00:53.840 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/cadastro - application/json 180
+2025-09-16 13:00:53.846 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:00:53.849 -03:00 [INF] Route matched with {action = "PostUsuario", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostUsuario(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 13:00:54.004 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi) in 149.8397ms
+2025-09-16 13:00:54.007 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:00:54.009 -03:00 [ERR] Erro não tratado
+System.Exception: Falha ao cadastrar usuario
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 52
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 13:00:54.017 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/cadastro - 500 null application/json 176.2314ms
+2025-09-16 13:02:14.853 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/cadastro - application/json 172
+2025-09-16 13:02:14.884 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:02:14.892 -03:00 [INF] Route matched with {action = "PostUsuario", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostUsuario(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 13:02:14.987 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi) in 86.0887ms
+2025-09-16 13:02:14.992 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:02:14.994 -03:00 [ERR] Erro não tratado
+System.Exception: Falha ao cadastrar usuario
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 52
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 13:02:15.003 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/cadastro - 500 null application/json 149.8586ms
+2025-09-16 13:02:40.822 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 13:02:41.077 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 13:02:41.080 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 13:02:41.122 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 13:02:41.125 -03:00 [INF] Hosting environment: Development
+2025-09-16 13:02:41.127 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 13:02:41.934 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 13:02:42.105 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 172.689ms
+2025-09-16 13:02:42.149 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 13:02:42.158 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 8.8161ms
+2025-09-16 13:02:42.189 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 13:02:42.215 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.8598ms
+2025-09-16 13:02:42.344 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 13:02:42.366 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.1914ms
+2025-09-16 13:02:53.078 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-16 13:02:53.177 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-16 13:02:53.179 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-16 13:02:53.219 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-16 13:02:53.222 -03:00 [INF] Hosting environment: Development
+2025-09-16 13:02:53.224 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-16 13:02:53.436 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-16 13:02:53.564 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 129.2619ms
+2025-09-16 13:02:53.586 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-16 13:02:53.586 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-16 13:02:53.595 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 8.2817ms
+2025-09-16 13:02:53.612 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.7639ms
+2025-09-16 13:02:53.635 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-16 13:02:53.661 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.1235ms
+2025-09-16 13:03:02.042 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Usuario/cadastro - application/json 172
+2025-09-16 13:03:02.072 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:03:02.099 -03:00 [INF] Route matched with {action = "PostUsuario", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostUsuario(AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.CreateUsuarioDto) on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-16 13:03:02.766 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi) in 654.9605ms
+2025-09-16 13:03:02.770 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario (AndreBrandaoCloudGamesApi)'
+2025-09-16 13:03:02.772 -03:00 [ERR] Erro não tratado
+System.Exception: Falha ao cadastrar usuario
+   at AndreBrandaoCloudGamesApi.Controllers.UsuarioController.PostUsuario(CreateUsuarioDto createUsuarioDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\UsuarioController.cs:line 52
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-16 13:03:02.843 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Usuario/cadastro - 500 null application/json 801.5074ms

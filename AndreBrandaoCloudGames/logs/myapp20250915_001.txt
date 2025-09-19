@@ -1,0 +1,435 @@
+2025-09-15 18:29:47.115 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-15 18:29:47.147 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-15 18:29:47.149 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-15 18:29:47.149 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-15 18:29:47.158 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-15 18:29:47.164 -03:00 [INF] Applying migration '20250915212935_DeleteBehave'.
+2025-09-15 18:29:47.186 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250915212935_DeleteBehave', N'8.0.0');
+2025-09-15 18:30:19.299 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-15 18:30:19.511 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-15 18:30:19.513 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-15 18:30:19.562 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-15 18:30:19.566 -03:00 [INF] Hosting environment: Development
+2025-09-15 18:30:19.569 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-15 18:30:20.210 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-15 18:30:20.378 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 173.3258ms
+2025-09-15 18:30:20.658 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-15 18:30:20.658 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-15 18:30:20.731 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 73.4592ms
+2025-09-15 18:30:20.771 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 113.8485ms
+2025-09-15 18:30:20.982 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-15 18:30:21.035 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 54.5605ms
+2025-09-15 18:30:27.295 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/ItemPedido - application/json 127
+2025-09-15 18:30:27.319 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:30:27.398 -03:00 [INF] Route matched with {action = "PostItemPedido", controller = "ItemPedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostItemPedido(AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.CreateItemPedidoDto) on controller AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:30:30.456 -03:00 [INF] Executed DbCommand (86ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedDate], [t].[IsPromotional], [t].[Preco], [t].[Titulo], [t0].[Id], [t0].[CreatedDate], [t0].[JogoId], [t0].[PedidoId], [t0].[PrecoUnitario], [t0].[Quantidade], [t0].[Id0], [t0].[CreatedDate0], [t0].[UsuarioId]
+FROM (
+    SELECT TOP(1) [j].[Id], [j].[CreatedDate], [j].[IsPromotional], [j].[Preco], [j].[Titulo]
+    FROM [Jogo] AS [j]
+    WHERE [j].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[CreatedDate], [i].[JogoId], [i].[PedidoId], [i].[PrecoUnitario], [i].[Quantidade], [p].[Id] AS [Id0], [p].[CreatedDate] AS [CreatedDate0], [p].[UsuarioId]
+    FROM [ItemPedido] AS [i]
+    INNER JOIN [Pedido] AS [p] ON [i].[PedidoId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[JogoId]
+ORDER BY [t].[Id], [t0].[Id]
+2025-09-15 18:30:30.731 -03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], [t0].[CreatedDate], [t0].[UsuarioId], [t0].[Id0], [t0].[AccessFailedCount], [t0].[ConcurrencyStamp], [t0].[Email], [t0].[EmailConfirmed], [t0].[LockoutEnabled], [t0].[LockoutEnd], [t0].[NormalizedEmail], [t0].[NormalizedUserName], [t0].[PasswordHash], [t0].[PhoneNumber], [t0].[PhoneNumberConfirmed], [t0].[SecurityStamp], [t0].[TwoFactorEnabled], [t0].[UserName], [t0].[CreatedDate0], [t0].[IsPremium], [t0].[Nome], [t0].[Role], [t0].[Saldo], [t1].[Id], [t1].[CreatedDate], [t1].[JogoId], [t1].[PedidoId], [t1].[PrecoUnitario], [t1].[Quantidade], [t1].[Id0], [t1].[CreatedDate0], [t1].[IsPromotional], [t1].[Preco], [t1].[Titulo]
+FROM (
+    SELECT TOP(1) [p].[Id], [p].[CreatedDate], [p].[UsuarioId], [t].[Id] AS [Id0], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[CreatedDate] AS [CreatedDate0], [t].[IsPremium], [t].[Nome], [t].[Role], [t].[Saldo]
+    FROM [Pedido] AS [p]
+    LEFT JOIN (
+        SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [u].[CreatedDate], [u].[IsPremium], [u].[Nome], [u].[Role], [u].[Saldo]
+        FROM [AspNetUsers] AS [a]
+        INNER JOIN [Usuario] AS [u] ON [a].[Id] = [u].[Id]
+    ) AS [t] ON [p].[UsuarioId] = [t].[Id]
+    WHERE [p].[Id] = @__id_0
+) AS [t0]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[CreatedDate], [i].[JogoId], [i].[PedidoId], [i].[PrecoUnitario], [i].[Quantidade], [j].[Id] AS [Id0], [j].[CreatedDate] AS [CreatedDate0], [j].[IsPromotional], [j].[Preco], [j].[Titulo]
+    FROM [ItemPedido] AS [i]
+    INNER JOIN [Jogo] AS [j] ON [i].[JogoId] = [j].[Id]
+) AS [t1] ON [t0].[Id] = [t1].[PedidoId]
+ORDER BY [t0].[Id], [t0].[Id0], [t1].[Id]
+2025-09-15 18:30:31.242 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi) in 3832.7072ms
+2025-09-15 18:30:31.250 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:30:31.410 -03:00 [ERR] Erro não tratado
+System.Exception: The association between entity types 'Jogo' and 'ItemPedido' has been severed, but the relationship is either marked as required or is implicitly required because the foreign key is not nullable. If the dependent/child entity should be deleted when a required relationship is severed, configure the relationship to use cascade deletes. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the key values.
+   at AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido(CreateItemPedidoDto createItemPedidoDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\ItemPedidoController.cs:line 67
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-15 18:30:31.486 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/ItemPedido - 500 null application/json 4191.5426ms
+2025-09-15 18:31:12.727 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-15 18:31:12.788 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-15 18:31:12.793 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-15 18:32:43.077 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-15 18:32:43.282 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-15 18:32:43.285 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-15 18:32:43.317 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-15 18:32:43.320 -03:00 [INF] Hosting environment: Development
+2025-09-15 18:32:43.322 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-15 18:32:43.785 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-15 18:32:43.891 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 106.0698ms
+2025-09-15 18:32:43.908 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-15 18:32:43.916 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 7.5182ms
+2025-09-15 18:32:43.969 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-15 18:32:44.013 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.5535ms
+2025-09-15 18:32:44.252 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-15 18:32:44.284 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.1514ms
+2025-09-15 18:32:51.222 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/ItemPedido - application/json 127
+2025-09-15 18:32:51.245 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:32:51.270 -03:00 [INF] Route matched with {action = "PostItemPedido", controller = "ItemPedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostItemPedido(AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.CreateItemPedidoDto) on controller AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:32:52.051 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ItemPedido] ([Id], [CreatedDate], [JogoId], [PedidoId], [PrecoUnitario], [Quantidade])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-15 18:32:52.071 -03:00 [INF] Setting HTTP status code 201.
+2025-09-15 18:32:52.076 -03:00 [INF] Writing value of type 'ItemPedido' as Json.
+2025-09-15 18:32:52.097 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi) in 820.2493ms
+2025-09-15 18:32:52.100 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:32:52.108 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/ItemPedido - 201 null application/json; charset=utf-8 885.5433ms
+2025-09-15 18:37:15.291 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-15 18:37:15.385 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-15 18:37:15.390 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-15 18:37:15.427 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-15 18:37:15.430 -03:00 [INF] Hosting environment: Development
+2025-09-15 18:37:15.432 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-15 18:37:15.964 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-15 18:37:16.076 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 112.9649ms
+2025-09-15 18:37:16.135 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-15 18:37:16.135 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-15 18:37:16.162 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 26.1876ms
+2025-09-15 18:37:16.185 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.9029ms
+2025-09-15 18:37:16.531 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-15 18:37:16.609 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.0244ms
+2025-09-15 18:37:45.940 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Jogo - application/json 66
+2025-09-15 18:37:45.950 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:37:45.963 -03:00 [INF] Route matched with {action = "PostJogo", controller = "Jogo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostJogo(AndreBrandaoCloudGamesApi.Data.Dtos.JogoDto.CreateJogoDto) on controller AndreBrandaoCloudGamesApi.Controllers.JogoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:37:46.650 -03:00 [INF] Executed DbCommand (23ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Jogo] ([Id], [CreatedDate], [IsPromotional], [Preco], [Titulo])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-09-15 18:37:46.666 -03:00 [INF] Setting HTTP status code 201.
+2025-09-15 18:37:46.670 -03:00 [INF] Writing value of type 'Jogo' as Json.
+2025-09-15 18:37:46.683 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi) in 714.7005ms
+2025-09-15 18:37:46.685 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:37:46.689 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Jogo - 201 null application/json; charset=utf-8 749.482ms
+2025-09-15 18:38:14.339 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/Usuario - null null
+2025-09-15 18:38:14.351 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.GetUsuarios (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:38:14.358 -03:00 [INF] Route matched with {action = "GetUsuarios", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.ICollection`1[AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.ReadUsuarioDto]] GetUsuarios() on controller AndreBrandaoCloudGamesApi.Controllers.UsuarioController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:38:14.485 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [u].[CreatedDate], [u].[IsPremium], [u].[Nome], [u].[Role], [u].[Saldo]
+FROM [AspNetUsers] AS [a]
+INNER JOIN [Usuario] AS [u] ON [a].[Id] = [u].[Id]
+2025-09-15 18:38:14.537 -03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[AndreBrandaoCloudGamesApi.Data.Dtos.UsuarioDto.ReadUsuarioDto, AndreBrandaoCloudGamesApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-15 18:38:14.544 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.UsuarioController.GetUsuarios (AndreBrandaoCloudGamesApi) in 181.753ms
+2025-09-15 18:38:14.547 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.UsuarioController.GetUsuarios (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:38:14.549 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/Usuario - 200 null application/json; charset=utf-8 210.2412ms
+2025-09-15 18:38:22.338 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Pedido - application/json 57
+2025-09-15 18:38:22.343 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PedidoController.PostPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:38:22.347 -03:00 [INF] Route matched with {action = "PostPedido", controller = "Pedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostPedido(AndreBrandaoCloudGamesApi.Data.Dtos.PedidoDto.CreatePedidoDto) on controller AndreBrandaoCloudGamesApi.Controllers.PedidoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:38:22.373 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Pedido] ([Id], [CreatedDate], [UsuarioId])
+VALUES (@p0, @p1, @p2);
+2025-09-15 18:38:22.381 -03:00 [INF] Setting HTTP status code 201.
+2025-09-15 18:38:22.384 -03:00 [INF] Writing value of type 'Pedido' as Json.
+2025-09-15 18:38:22.386 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PedidoController.PostPedido (AndreBrandaoCloudGamesApi) in 36.4856ms
+2025-09-15 18:38:22.389 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PedidoController.PostPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:38:22.391 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Pedido - 201 null application/json; charset=utf-8 53.2311ms
+2025-09-15 18:38:50.014 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/ItemPedido - application/json 127
+2025-09-15 18:38:50.025 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:38:50.028 -03:00 [INF] Route matched with {action = "PostItemPedido", controller = "ItemPedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostItemPedido(AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.CreateItemPedidoDto) on controller AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:38:50.034 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi) in 4.1818ms
+2025-09-15 18:38:50.036 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:38:50.038 -03:00 [ERR] Erro não tratado
+System.Exception: Object reference not set to an instance of an object.
+   at AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido(CreateItemPedidoDto createItemPedidoDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\ItemPedidoController.cs:line 62
+   at lambda_method291(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-15 18:38:50.073 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/ItemPedido - 500 null application/json 58.9439ms
+2025-09-15 18:40:38.386 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-15 18:40:38.487 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-15 18:40:38.489 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-15 18:40:38.523 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-15 18:40:38.526 -03:00 [INF] Hosting environment: Development
+2025-09-15 18:40:38.528 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-15 18:40:38.859 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-15 18:40:38.969 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 111.4912ms
+2025-09-15 18:40:39.020 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-15 18:40:39.020 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-15 18:40:39.034 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 14.0892ms
+2025-09-15 18:40:39.062 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.957ms
+2025-09-15 18:40:39.376 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-15 18:40:39.394 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.9959ms
+2025-09-15 18:40:47.953 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/ItemPedido - application/json 127
+2025-09-15 18:40:48.006 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:40:48.058 -03:00 [INF] Route matched with {action = "PostItemPedido", controller = "ItemPedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostItemPedido(AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.CreateItemPedidoDto) on controller AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:40:49.790 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi) in 1724.1883ms
+2025-09-15 18:40:49.793 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:40:49.795 -03:00 [ERR] Erro não tratado
+System.Exception: Object reference not set to an instance of an object.
+   at AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido(CreateItemPedidoDto createItemPedidoDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\ItemPedidoController.cs:line 62
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-15 18:40:49.860 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/ItemPedido - 500 null application/json 1907.1817ms
+2025-09-15 18:48:06.074 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-15 18:48:06.405 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-15 18:48:06.410 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-15 18:48:06.457 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-15 18:48:06.460 -03:00 [INF] Hosting environment: Development
+2025-09-15 18:48:06.461 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-15 18:48:06.650 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-15 18:48:06.762 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 112.5907ms
+2025-09-15 18:48:06.881 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-15 18:48:06.881 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-15 18:48:06.886 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 4.6797ms
+2025-09-15 18:48:06.900 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.9162ms
+2025-09-15 18:48:06.931 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-15 18:48:06.947 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.8161ms
+2025-09-15 18:48:11.459 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/ItemPedido - application/json 127
+2025-09-15 18:48:11.513 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:48:11.572 -03:00 [INF] Route matched with {action = "PostItemPedido", controller = "ItemPedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostItemPedido(AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.CreateItemPedidoDto) on controller AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:48:13.962 -03:00 [INF] Executed DbCommand (60ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ItemPedido] ([Id], [CreatedDate], [JogoId], [PedidoId], [PrecoUnitario], [Quantidade])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-15 18:48:14.055 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi) in 2469.3028ms
+2025-09-15 18:48:14.062 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:48:14.066 -03:00 [ERR] Erro não tratado
+System.Exception: Object reference not set to an instance of an object.
+   at AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido(CreateItemPedidoDto createItemPedidoDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\ItemPedidoController.cs:line 60
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-15 18:48:14.173 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/ItemPedido - 500 null application/json 2713.3176ms
+2025-09-15 18:49:14.276 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-15 18:49:14.384 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-15 18:49:14.387 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-15 18:49:14.428 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-15 18:49:14.434 -03:00 [INF] Hosting environment: Development
+2025-09-15 18:49:14.437 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-15 18:49:14.719 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-15 18:49:14.828 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 111.1847ms
+2025-09-15 18:49:14.894 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-15 18:49:14.894 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-15 18:49:14.923 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 29.1564ms
+2025-09-15 18:49:14.945 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.8109ms
+2025-09-15 18:49:15.198 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-15 18:49:15.241 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.9134ms
+2025-09-15 18:49:23.040 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/ItemPedido - application/json 127
+2025-09-15 18:49:23.070 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:49:23.151 -03:00 [INF] Route matched with {action = "PostItemPedido", controller = "ItemPedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostItemPedido(AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.CreateItemPedidoDto) on controller AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:49:25.822 -03:00 [INF] Executed DbCommand (66ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ItemPedido] ([Id], [CreatedDate], [JogoId], [PedidoId], [PrecoUnitario], [Quantidade])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-15 18:49:25.879 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi) in 2709.1084ms
+2025-09-15 18:49:25.884 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:49:25.888 -03:00 [ERR] Erro não tratado
+System.Exception: Object reference not set to an instance of an object.
+   at AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido(CreateItemPedidoDto createItemPedidoDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\ItemPedidoController.cs:line 60
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-15 18:49:25.984 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/ItemPedido - 500 null application/json 2944.5995ms
+2025-09-15 18:49:46.562 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-15 18:49:46.652 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-15 18:49:46.655 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-15 18:49:46.696 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-15 18:49:46.699 -03:00 [INF] Hosting environment: Development
+2025-09-15 18:49:46.700 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-15 18:49:46.916 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-15 18:49:47.063 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 148.0772ms
+2025-09-15 18:49:47.076 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-15 18:49:47.076 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-15 18:49:47.084 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 7.4701ms
+2025-09-15 18:49:47.103 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.3593ms
+2025-09-15 18:49:47.170 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-15 18:49:47.186 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.3897ms
+2025-09-15 18:49:53.509 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/ItemPedido - application/json 127
+2025-09-15 18:49:53.549 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:49:53.579 -03:00 [INF] Route matched with {action = "PostItemPedido", controller = "ItemPedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostItemPedido(AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.CreateItemPedidoDto) on controller AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:49:55.692 -03:00 [INF] Executed DbCommand (74ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ItemPedido] ([Id], [CreatedDate], [JogoId], [PedidoId], [PrecoUnitario], [Quantidade])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-15 18:49:55.781 -03:00 [INF] Setting HTTP status code 201.
+2025-09-15 18:49:55.801 -03:00 [INF] Writing value of type 'ItemPedido' as Json.
+2025-09-15 18:49:55.862 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi) in 2275.2265ms
+2025-09-15 18:49:55.866 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:49:55.879 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/ItemPedido - 201 null application/json; charset=utf-8 2369.9413ms
+2025-09-15 18:55:36.961 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-15 18:55:37.060 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-15 18:55:37.064 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-15 18:55:37.106 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-15 18:55:37.130 -03:00 [INF] Hosting environment: Development
+2025-09-15 18:55:37.131 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-15 18:55:37.331 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-15 18:55:37.432 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 102.5005ms
+2025-09-15 18:55:37.490 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-15 18:55:37.490 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-15 18:55:37.504 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 13.6913ms
+2025-09-15 18:55:37.553 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.6257ms
+2025-09-15 18:55:38.073 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-15 18:55:38.101 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.2159ms
+2025-09-15 18:55:56.005 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/Pedido - null null
+2025-09-15 18:55:56.036 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.PedidoController.GetPedidos (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:55:56.075 -03:00 [INF] Route matched with {action = "GetPedidos", controller = "Pedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.ICollection`1[AndreBrandaoCloudGamesApi.Data.Dtos.PedidoDto.ReadPedidoDto]] GetPedidos() on controller AndreBrandaoCloudGamesApi.Controllers.PedidoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:55:57.571 -03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedDate], [p].[UsuarioId]
+FROM [Pedido] AS [p]
+2025-09-15 18:55:57.696 -03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[AndreBrandaoCloudGamesApi.Data.Dtos.PedidoDto.ReadPedidoDto, AndreBrandaoCloudGamesApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-15 18:55:57.720 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.PedidoController.GetPedidos (AndreBrandaoCloudGamesApi) in 1635.4312ms
+2025-09-15 18:55:57.725 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.PedidoController.GetPedidos (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:55:57.732 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/Pedido - 200 null application/json; charset=utf-8 1726.8833ms
+2025-09-15 18:56:11.699 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/ItemPedido - application/json 127
+2025-09-15 18:56:11.719 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:56:11.740 -03:00 [INF] Route matched with {action = "PostItemPedido", controller = "ItemPedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostItemPedido(AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.CreateItemPedidoDto) on controller AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:56:11.847 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi) in 99.5973ms
+2025-09-15 18:56:11.850 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:56:11.854 -03:00 [ERR] Erro não tratado
+System.Exception: Object reference not set to an instance of an object.
+   at AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido(CreateItemPedidoDto createItemPedidoDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\ItemPedidoController.cs:line 60
+   at lambda_method52(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-15 18:56:11.917 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/ItemPedido - 500 null application/json 217.6858ms
+2025-09-15 18:58:43.823 -03:00 [INF] User profile is available. Using 'C:\Users\andre.brandao\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-15 18:58:43.936 -03:00 [INF] Now listening on: https://localhost:7167
+2025-09-15 18:58:43.938 -03:00 [INF] Now listening on: http://localhost:5134
+2025-09-15 18:58:43.977 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-15 18:58:43.980 -03:00 [INF] Hosting environment: Development
+2025-09-15 18:58:43.981 -03:00 [INF] Content root path: C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames
+2025-09-15 18:58:44.112 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - null null
+2025-09-15 18:58:44.210 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - 200 null text/html;charset=utf-8 97.6972ms
+2025-09-15 18:58:44.221 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-15 18:58:44.221 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - null null
+2025-09-15 18:58:44.229 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 8.669ms
+2025-09-15 18:58:44.244 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.4012ms
+2025-09-15 18:58:44.371 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - null null
+2025-09-15 18:58:44.385 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.2926ms
+2025-09-15 18:59:01.756 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/Jogo - application/json 64
+2025-09-15 18:59:01.776 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:59:01.839 -03:00 [INF] Route matched with {action = "PostJogo", controller = "Jogo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostJogo(AndreBrandaoCloudGamesApi.Data.Dtos.JogoDto.CreateJogoDto) on controller AndreBrandaoCloudGamesApi.Controllers.JogoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:59:03.657 -03:00 [INF] Executed DbCommand (52ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p4='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Jogo] ([Id], [CreatedDate], [IsPromotional], [Preco], [Titulo])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-09-15 18:59:03.696 -03:00 [INF] Setting HTTP status code 201.
+2025-09-15 18:59:03.704 -03:00 [INF] Writing value of type 'Jogo' as Json.
+2025-09-15 18:59:03.727 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi) in 1877.0931ms
+2025-09-15 18:59:03.730 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.JogoController.PostJogo (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:59:03.738 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/Jogo - 201 null application/json; charset=utf-8 1982.3885ms
+2025-09-15 18:59:17.010 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7167/ItemPedido - application/json 127
+2025-09-15 18:59:17.016 -03:00 [INF] Executing endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:59:17.030 -03:00 [INF] Route matched with {action = "PostItemPedido", controller = "ItemPedido"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Http.IResult] PostItemPedido(AndreBrandaoCloudGamesApi.Data.Dtos.ItemPedidoDto.CreateItemPedidoDto) on controller AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController (AndreBrandaoCloudGamesApi).
+2025-09-15 18:59:17.135 -03:00 [INF] Executed action AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi) in 99.4082ms
+2025-09-15 18:59:17.139 -03:00 [INF] Executed endpoint 'AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido (AndreBrandaoCloudGamesApi)'
+2025-09-15 18:59:17.142 -03:00 [ERR] Erro não tratado
+System.Exception: Object reference not set to an instance of an object.
+   at AndreBrandaoCloudGamesApi.Controllers.ItemPedidoController.PostItemPedido(CreateItemPedidoDto createItemPedidoDto) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Controllers\ItemPedidoController.cs:line 60
+   at lambda_method93(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at AndreBrandaoCloudGamesApi.Identity.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Repos\Fiap Cloud Games\AndreBrandaoCloudGames\Identity\ExceptionMiddleware.cs:line 19
+2025-09-15 18:59:17.197 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7167/ItemPedido - 500 null application/json 186.1603ms

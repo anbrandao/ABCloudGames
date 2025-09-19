@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndreBrandaoCloudGamesApi", "AndreBrandaoCloudGamesApi.csproj", "{86646236-30E6-499A-82C2-C2869B62E466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndreBrandaoCloudGames.Test", "..\AndreBrandaoCloudGames.Test\AndreBrandaoCloudGames.Test.csproj", "{F92317E9-8AF6-47F7-9861-E9E0F767EFCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86646236-30E6-499A-82C2-C2869B62E466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86646236-30E6-499A-82C2-C2869B62E466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86646236-30E6-499A-82C2-C2869B62E466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86646236-30E6-499A-82C2-C2869B62E466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F92317E9-8AF6-47F7-9861-E9E0F767EFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F92317E9-8AF6-47F7-9861-E9E0F767EFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F92317E9-8AF6-47F7-9861-E9E0F767EFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F92317E9-8AF6-47F7-9861-E9E0F767EFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7841D8D7-1093-4575-A7E3-82E36F150F9B}
+	EndGlobalSection
+EndGlobal
